@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raw Dog v1.0 – Signal Processing GUI</title>
+  <style>
+    :root {
+      --accent: #2e7cc3;
+      --bg: #f9f9f9;
+      --text: #222;
+      --border: #ddd;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1, h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    p, ul {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a.button {
+      display: inline-block;
+      margin: 0.5rem 0.5rem 1rem 0;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background: #1f5e96;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    img.screenshot, video.demo {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    iframe.youtube {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1><img src="dog.png" alt="RawDog Icon" style="height: 3.5rem; vertical-align: middle; margin-right: 0.8rem;"> Raw Dog v1.0</h1>
+  <p><strong>No-Code Tool for Raw Data Processing & Plotting</strong></p>
+
+  <a href="#download-section" class="button">⬇ Downloads</a>
+  <a href="#youtube-demo" class="button" style="background:#555;">▶ Watch Full Demo</a>
+
+  <h2>Overview</h2>
+  <p>
+    Raw Dog is a standalone desktop GUI for parsing, processing, and visualizing time-series data. Built for hobbyists, engineers and researchers, it enables a raw-to-plot workflow with no coding required. It follows a glass-box philosophy, exposing the underlying Python code for inspection and customization.
+  </p>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li>Instant workflow: Load → Parse → Process → Visualize</li>
+    <li>Signal operations: filter, normalize, resample, and more</li>
+    <li>Comparison tools: Bland-Altman, correlation, and error histograms</li>
+    <li>Customizable plots: Multi-subplot layouts with stylization options</li>
+    <li>Transparent backend: Inspect, edit, and run custom Python scripts</li>
+  </ul>
+
+
+  <h2>Quick Demo (30s)</h2>
+  <video class="demo" autoplay loop muted playsinline>
+    <source src="rawdog-demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h2 id="youtube-demo">Full Demo (YouTube)</h2>
+  <iframe class="youtube" src="https://www.youtube.com/embed/e7Cki0yFBxY" allowfullscreen></iframe>
+
+  <h2>Screenshots</h2>
+
+  <p><strong>Main Interface</strong>: Load data, auto-parse, and visualize raw signals.</p>
+  <img src="main_window.png" alt="Main Window UI" class="screenshot" />  
+  
+  <p><strong>Process Wizard</strong>: Apply transformations like filtering, normalization, and resampling — no code needed.</p>
+  <img src="process_wizard.png" alt="Process Wizard Screenshot" class="screenshot" />
+    
+  <p><strong>Mix Wizard</strong>: Mix two signals using templates or custom expressions.</p>
+  <img src="mix_wizard.png" alt="Mix Wizard Screenshot" class="screenshot" />
+    
+  <p><strong>Compare Wizard</strong>: Visualize agreement between channels using Bland-Altman, correlation, or error histograms.</p>
+  <img src="comparison_wizard.png" alt="Compare Wizard Screenshot" class="screenshot" />
+    
+  <p><strong>Plot Wizard</strong>: Build multi-subplot figures with stylized plots and full layout control.</p>
+  <img src="plot_wizard.png" alt="Plot Wizard Screenshot" class="screenshot" />
+  
+  <h2>Note</h2>
+  <p>
+    This is a <strong>beta release</strong>. I'm actively working to improve stability. It's free to use . If you find Raw Dog helpful and want to support future development, please <a href="mailto:chicago.lakes@pm.me">reach out</a> or share.
+  </p>
+
+  <h2 id="download-section">Download</h2>
+  <p>Choose the version for your system:</p>
+  
+  <a href="https://drive.google.com/uc?export=download&id=1bgF0CeM_ezIE9bxtOulBG7gPwjyZPBrD" class="button">⬇ macOS (Intel)</a>
+  <a href="https://drive.google.com/uc?export=download&id=1R18VDlbHKjLjUkeCQ9NpWF0BXE0yj-_E" class="button">⬇ macOS (Apple Silicon)</a>
+  <a href="https://drive.google.com/uc?export=download&id=1odOImnnmON687UgmMWhvbGpL3ovGKXIx" class="button">⬇ Windows</a>
+  
+  <p style="margin-top: 1.5rem;"><strong>Sample Data:</strong></p>
+  <a href="respiration_accel.txt" class="button" style="background: #28a745;" download> Test Data (.txt)</a>
+
+  <h2>Install Instructions</h2>
+  <p>
+    Follow these steps to get started — no coding required.
+  </p>
+  <ol>
+    <li><strong>Download</strong> the correct <code>.zip</code> file for your system (see buttons above).</li>
+    <li><strong>Unzip</strong> the file</strong>: Double-click the downloaded <code>.zip</code> file to extract it. This will create a folder containing the application.</li>
+    <li><strong>Open the app</strong>: Inside the folder, double-click the file named <code>RawDog.app</code> or <code>GUI8.app</code> (on macOS), or <code>RawDog.exe</code> (on Windows) to launch the tool.</li>
+    <li>The app may take <strong>1–2 minutes</strong> to launch the first time. This is expected — please be patient.</li>
+    <li><strong>Start with the included test data</strong>. Large datasets may take longer to load or may appear unresponsive at first — give it a moment.</li>
+  </ol>
+
+  <p><strong>Compatibility Notes:</strong></p>
+  <ul>
+    <li><strong>macOS:</strong> Tested on macOS 12 and above. Compatible with both Intel and Apple Silicon (M1/M2) machines.</li>
+    <li><strong>Windows:</strong> Tested on Windows 10 (64-bit). Compatibility with other versions (e.g. Windows 11 or older) has not been verified.</li>
+  </ul>
+  
+
+  <h2>Contact</h2>
+  <p>
+    Have questions or need a custom GUI for your lab or project?  
+    Email: <a href="mailto:chicago.lakes@pm.me">chicago.lakes@pm.me</a>
+  </p>
+
+  <footer>
+    Raw Dog v1.0 – Built in Python with PySide6.  
+    © 2025 rawanimal.dev
+  </footer>
+
+</body>
+</html>
