@@ -150,7 +150,7 @@
   
   <a href="https://www.dropbox.com/scl/fi/hin54jqjflqw2tac9lp2t/RawDog-macOS-I.zip?rlkey=zavbem6nbuor3pvxweascgh29&st=l1ultqp7&dl=1" class="button">⬇ macOS (Intel)</a>
   <a href="https://www.dropbox.com/scl/fi/uz139znwxjg57nnzhf41n/RawDog-macOS-M.zip?rlkey=sir9h9s5rzk7fy4qctznafour&st=mnts3bfl&dl=1" class="button">⬇ macOS (Apple Silicon)</a>
-  <a href="https://www.dropbox.com/scl/fi/yixq8cnpbbts9k66r0mg8/RawDog-windows.zip?rlkey=hlcdc4oqirgtz590t1o7m4uv8&st=6l53gml5&dl=1" class="button">⬇ Windows</a>
+  <a href="https://www.dropbox.com/scl/fi/yixq8cnpbbts9k66r0mg8/RawDog-Windows.zip?rlkey=hlcdc4oqirgtz590t1o7m4uv8&st=ih3pppuz&dl=1" class="button">⬇ Windows</a>
   
   <p style="margin-top: 1.5rem;"><strong>Sample Data:</strong></p>
   <a href="respiration_accel.txt" class="button" style="background: #28a745;" download> Test Data (.txt)</a>
@@ -168,7 +168,19 @@
       </ul>
       This will create a folder containing the application.
     </li>
-    <li><strong>Open the app</strong>: Inside the folder, double-click the file named <code>RawDog.app</code> or <code>GUI8.app</code> (on macOS), or <code>RawDog.exe</code> (on Windows) to launch the tool.</li>
+    <li><strong>Open the app</strong>: 
+      <ul>
+        <li><strong>Windows</strong>: Double-click <code>GUI8.exe</code> to launch the tool. (Note: The app is named "GUI8.exe" instead of "RawDog.exe" to avoid false virus detection.)</li>
+        <li><strong>macOS</strong>: Double-click <code>RawDog.app</code>. You may see a security warning "cannot be opened because the developer cannot be verified." If this happens:
+          <ol>
+            <li>Right-click (or Control-click) on the app</li>
+            <li>Select "Open" from the context menu</li>
+            <li>You'll see the warning again, but now with an "Open" button</li>
+            <li>Click "Open" to launch the tool</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
     <li>The app may take <strong>1–2 minutes</strong> to launch the first time. This is expected — please be patient.</li>
     <li><strong>Start with the included test data</strong>. Large datasets may take longer to load or may appear unresponsive at first — give it a moment.</li>
   </ol>
